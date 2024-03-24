@@ -1,0 +1,25 @@
+{
+    "name": "so-many-problems/metis",
+    "description": "Metis is a core package to get the logs from laravel and store it in a defined laravel storage",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "giunashvili",
+            "email": "giorgi.official@yahoo.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SoManyProblems\\Metis\\MetisServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "SoManyProblems\\Metis\\": "src"
+        }
+    }
+}
