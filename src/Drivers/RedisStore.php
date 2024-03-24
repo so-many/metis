@@ -55,8 +55,13 @@ class RedisStore implements Metis
     private function generateKey(Carbon $timestamp)
     {
         $year = $timestamp->year;
+
+        $currentLocale = Carbon::getLocale();
+        Carbon::setLocale('en');
         $monthName = $timestamp->monthName;
-        $day = $timestamp->dayOfMonth;
+        Carbon::setLocale($currentLocale);
+
+        $day = $timestamp->day;
 
         $key = $day . "." . $monthName . "." . $year;
         
